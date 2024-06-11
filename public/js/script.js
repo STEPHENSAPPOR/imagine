@@ -162,3 +162,39 @@ const alphabets = ['A', 'B', 'C'];
 alphabets;
 alphabets.join('');
 alphabets.join('').split('');
+
+// Write a function that will take a user with firstname and lastname and return full name
+const user = {
+  firstname: 'stephen',
+  lastname: 'sappor'
+}
+function fullname(user) {
+  return {
+    ...user,
+    fullname:  `${user.firstname} ${user.lastname}`
+  }
+}
+fullname(user);
+
+// Array map
+const users = [
+  {firstname: 'Jerry', lastname: 'Parker'},
+  {firstname: 'Mark', lastname: 'Lynn'},
+  {firstname: 'Marvin', lastname: 'Ray'},
+  {firstname: 'Peck', lastname: 'Ryan'},
+  {firstname: 'Reece', lastname: 'Hobbs'} 
+]
+users.map(fullname);
+
+// Map and return squares of numbers
+function square(number) {
+  return number ** 2;
+}
+const numbers = [0,1,2,3,4,5]
+numbers.map(square);
+
+// Filter and return even numbers
+function even(number) {
+  return number % 2 === 0;
+}
+numbers.filter(even);
